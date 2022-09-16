@@ -6,8 +6,15 @@
 
 <p id="demo"></p>
 <p id="demo2"></p>
+<p id="demo3"></p>
 
 <script>
+
+//change day for testing
+let day = new Date();
+
+day.setDate(14);
+ //
 
 let mon = 85;
 let tue = 90;
@@ -19,12 +26,16 @@ let sun = 85;
 
 let temp = 0;
 
-let day;
-switch (new Date().getDay()) {
+
+
+
+switch (day.getDay()) {
   case 0:
+
     day = "Sunday";
     break;
   case 1:
+
     day = "Monday";
     break;
   case 2:
@@ -32,20 +43,25 @@ switch (new Date().getDay()) {
     break;
   case 3:
     day = "Wednesday";
+    temp = wed;
     break;
   case 4:
     day = "Thursday";
     break;
   case 5:
+
     day = "Friday";
     temp = fri;
     break;
   case  6:
     day = "Saturday";
 }
-document.getElementById("demo").innerHTML = "Today is " + day;
+document.getElementById("demo").innerHTML = "Today is " + new Date().getDay();
 
 document.getElementById("demo2").innerHTML = "Temperature is " + temp;
+
+
+document.getElementById("demo3").innerHTML = "shift day is " + day;
 
 </script>
 
