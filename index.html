@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript switch</h2>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+
+let mon = 85;
+let tue = 90;
+let wed = 93;
+let thu = 67;
+let fri = 81;
+let sat = 71;
+let sun = 85;
+
+let temp = 0;
+
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    temp = fri;
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+
+document.getElementById("demo2").innerHTML = "Temperature is " + temp;
+
+</script>
+
+</body>
+</html>
