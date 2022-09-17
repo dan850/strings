@@ -4,11 +4,12 @@
 
 <h2>JavaScript switch</h2>
 
-<p id="demo"></p>
-<p id="demo2"></p>
-<p id="demo3"></p>
-<p id="demo4"></p>
+<p id="initialdate"></p>
+<p id="temp"></p>
+<p id="concat"></p>
+<p id="shiftday"></p>
 
+<p id="todaysdate"></p>
 
 
 <script>
@@ -16,7 +17,6 @@
 //change day for testing
 let day = new Date();
 
-day.setDate(14);
  //
 
 let mon = 85;
@@ -59,17 +59,51 @@ switch (day.getDay()) {
   case  6:
     day = "Saturday";
 }
-document.getElementById("demo").innerHTML = "Today is " + new Date().getDay();
-
-document.getElementById("demo2").innerHTML = "Temperature is " + temp;
 
 
-document.getElementById("demo3").innerHTML = "shift day is " + day;
+
+document.getElementById("initialdate").innerHTML = "Today is " + day;
+
+document.getElementById("temp").innerHTML = "Temperature is " + temp;
+
 
 
 let text1 = "Weather";
 let text2 = day.concat(" ",text1);
-document.getElementById("demo4").innerHTML = text2;
+document.getElementById("concat").innerHTML = text2 +" " + temp;
+
+const shiftDay = new Date();
+
+changeDate(14);
+
+document.getElementById("shiftday").innerHTML = "shift day is " + shiftDay;
+
+changeDate(13);
+
+document.getElementById("todaysdate").innerHTML = "shiftday is now " + shiftDay;
+
+
+
+function changeDate(dayNum) {
+
+return  shiftDay.setDate(dayNum);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 </body>
