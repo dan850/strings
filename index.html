@@ -7,6 +7,8 @@
 <p id="initialdate"></p>
 <p id="temp"></p>
 <p id="concat"></p>
+<p id="concat2"></p>
+
 <p id="shiftday"></p>
 
 <p id="todaysdate"></p>
@@ -15,7 +17,7 @@
 <script>
 
 //change day for testing
-let day = new Date();
+//let day = new Date();
 
  //
 
@@ -32,17 +34,20 @@ let temp = 0;
 
 
 
-switch (day.getDay()) {
+switch (new Date().getDay()) {
   case 0:
 
     day = "Sunday";
+    temp = sun;
     break;
   case 1:
 
     day = "Monday";
+    temp=mon;
     break;
   case 2:
     day = "Tuesday";
+    temp=tue
     break;
   case 3:
     day = "Wednesday";
@@ -50,6 +55,7 @@ switch (day.getDay()) {
     break;
   case 4:
     day = "Thursday";
+    temp=thu;
     break;
   case 5:
 
@@ -58,6 +64,7 @@ switch (day.getDay()) {
     break;
   case  6:
     day = "Saturday";
+    temp= sat;
 }
 
 
@@ -68,7 +75,8 @@ document.getElementById("temp").innerHTML = "Temperature is " + temp;
 
 
 
-document.getElementById("concat").innerHTML = textStrings("weather", mon) +" ";
+document.getElementById("concat").innerHTML = textStrings("weather for ", mon) +" ";
+
 
 const shiftDay = new Date();
 
@@ -79,6 +87,8 @@ document.getElementById("shiftday").innerHTML = "shift day is " + shiftDay;
 changeDate(13);
 
 document.getElementById("todaysdate").innerHTML = "shiftday is now " + shiftDay;
+
+document.getElementById("concat2").innerHTML = textStrings("weather for ", sat) +" ";
 
 
 
