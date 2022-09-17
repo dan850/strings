@@ -68,9 +68,7 @@ document.getElementById("temp").innerHTML = "Temperature is " + temp;
 
 
 
-let text1 = "Weather";
-let text2 = day.concat(" ",text1);
-document.getElementById("concat").innerHTML = text2 +" " + temp;
+document.getElementById("concat").innerHTML = textStrings("weather", mon) +" ";
 
 const shiftDay = new Date();
 
@@ -91,7 +89,16 @@ return  shiftDay.setDate(dayNum);
 
 }
 
+function textStrings(weatherText, Temperature) {
 
+
+//weatherText = " ";
+let mergeText = weatherText.concat(" ", Temperature);
+
+return  mergeText;
+
+
+}
 
 
 
