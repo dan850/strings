@@ -8,7 +8,13 @@
 <p id="temp"></p>
 <p id="concat"></p>
 <p id="concat2"></p>
+<p id="ifcool"></p>
+
 <p id="concat3"></p>
+
+
+<p id="ifhot"></p>
+
 <p id="concat4"></p>
 <p id="concat5"></p>
 <p id="concat6"></p>
@@ -109,6 +115,27 @@ document.getElementById("concat5").innerHTML = textStrings("weather for Wedensda
 document.getElementById("concat6").innerHTML = textStrings("weather for Thursday is ", thu) +" ";
 
 document.getElementById("concat7").innerHTML = textStrings("weather for Friday is ", fri) +" ";
+
+
+//
+if(temp >= sun)
+{
+
+    document.getElementById("ifhot").innerHTML = "HOT DAY TODAY!";
+
+
+}
+
+
+if(temp <= sat)
+{
+
+    document.getElementById("ifcool").innerHTML = "Nice And Cool Day Today!";
+
+
+}
+
+
 
 function changeDate(dayNum) {
 
