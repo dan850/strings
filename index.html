@@ -8,6 +8,13 @@
 <p id="temp"></p>
 <p id="concat"></p>
 <p id="concat2"></p>
+<p id="concat3"></p>
+<p id="concat4"></p>
+<p id="concat5"></p>
+<p id="concat6"></p>
+<p id="concat7"></p>
+
+
 
 <p id="shiftday"></p>
 
@@ -27,7 +34,7 @@ let wed = 93;
 let thu = 67;
 let fri = 81;
 let sat = 71;
-let sun = 85;
+let sun = 95;
 
 let temp = 0;
 
@@ -75,7 +82,6 @@ document.getElementById("temp").innerHTML = "Temperature is " + temp;
 
 
 
-document.getElementById("concat").innerHTML = textStrings("weather for Monday is ", mon) +" ";
 
 
 const shiftDay = new Date();
@@ -88,9 +94,21 @@ changeDate(13);
 
 document.getElementById("todaysdate").innerHTML = "shiftday is now " + shiftDay;
 
+document.getElementById("concat").innerHTML = textStrings("weather for Monday is ", mon) +" ";
+
+
 document.getElementById("concat2").innerHTML = textStrings("weather for Saturday is ", sat) +" ";
 
 
+document.getElementById("concat3").innerHTML = textStrings("weather for Sunday is ", sun) +" ";
+
+document.getElementById("concat4").innerHTML = textStrings("weather for Tuesday is ", tue) +" ";
+
+document.getElementById("concat5").innerHTML = textStrings("weather for Wedensday is ", wed) +" ";
+
+document.getElementById("concat6").innerHTML = textStrings("weather for Thursday is ", thu) +" ";
+
+document.getElementById("concat7").innerHTML = textStrings("weather for Friday is ", fri) +" ";
 
 function changeDate(dayNum) {
 
