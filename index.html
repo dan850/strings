@@ -47,7 +47,7 @@ let temp = 0;
 
 
 
-switch (new Date().getDay()) {
+switch (new Date("September 18, 2022 01:15:00").getDay()) {
   case 0:
 
     day = "Sunday";
@@ -102,9 +102,13 @@ document.getElementById("todaysdate").innerHTML = "shiftday is now " + shiftDay;
 
 document.getElementById("concat").innerHTML = textStrings("weather for Monday is ", mon) +" ";
 
+ new Date("September 17, 2022 01:15:00").getDay();
+
 
 document.getElementById("concat2").innerHTML = textStrings("weather for Saturday is ", sat) +" ";
 
+
+//changeDate(10);
 
 document.getElementById("concat3").innerHTML = textStrings("weather for Sunday is ", sun) +" ";
 
@@ -135,6 +139,10 @@ if(temp <= sat)
 
 }
 
+else
+document.getElementById("ifcool").innerHTML = "moderate temps!";
+
+
 
 
 function changeDate(dayNum) {
@@ -147,7 +155,6 @@ return  shiftDay.setDate(dayNum);
 function textStrings(weatherText, Temperature) {
 
 
-//weatherText = " ";
 let mergeText = weatherText.concat(" ", Temperature);
 
 return  mergeText;
